@@ -21,7 +21,7 @@ This is a weather dashboard that allows you to search for the current weather co
 
 
 ### Screenshot
-![Screenshot]()
+![Screenshot](https://github.com/adokoye/weather-dashboard/blob/master/assets/images/Screen%20Shot%202020-09-06%20at%209.21.07%20PM.png)
 
 ### Link
 
