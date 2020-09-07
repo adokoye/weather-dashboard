@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic.min.css"
+        integrity="sha512-LeCmts7kEi09nKc+DwGJqDV+dNQi/W8/qb0oUSsBLzTYiBwxj0KBlAow2//jV7jwEHwSCPShRN2+IWwWcn1x7Q=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body class="flex-column min-100-vh">
+    <header>
+        <h1>Weather Dashboard</h1>
+    </header>
+
+    <main>
+        <div class="container">
+            <!-- Search form container -->
+            <div class="row">
+                <div class="col-sm-4">
+                    <h2 class="pt-1" for="search">Search for a City:</h2>
+                    <form id="search-form" class="input-group mb-3 ">
+                        <div class="input-group-append w-100">
+                            <input type="text" id="search" class="form-control w-100" placeholder="Search for a City"
+                                aria-describedby="button-addon2">
+                            <button class="btn btn-primary" type="submit"><span class="oi"
+                                    data-glyph="magnifying-glass"></span></button>
+                        </div>
+                    </form>
+
+                    <!-- Clear Search History button -->
+                    <button class="btn btn-primary mb-2 mt-2" type="submit" id="clear-history">Clear History</button>
+
+                    <!-- Search history container -->
+                    <div class="col-sm">
+                        <ul id="search-history" class="list-group"></ul>
+                    </div>
+                </div>
+
+                <div class="col-sm-8">
+                    <!-- display weather dashboard container -->
+                    <div id="weather-dash" class="row ml-2 border border-dark">
+                        <div class="col-sm-12 text-wrap">
+                            <h2><span id="current-city" class="mb-1 mt-2 bolder text-uppercase"></span> <img id="icon"
+                                    src="">
+                            </h2>
+                            <h3>Temperature: <span id="current-temp" class="font-weight-bold"></span>℉</h3>
+                            <h3>Humidity: <span id="current-humidity" class="font-weight-bold"></span>%</h3>
+                            <h3>Wind Speed: <span id="current-wind-speed" class="font-weight-bold"></span> MPH</h3>
+                            <h3>UV Index: <span id="current-UVI" class="font-weight-bold"></span></h3>
+                        </div>
+                    </div>
+
+                    <!-- display 5-day Weather container -->
+                    <div class="col-sm-12">
+                        <h2 id="current-city-forecast">5 Day Weather Forecast:</h2>
+
+                        <div id="five-day-weather" class="row text-light">
+                            <div id="weather-dash0" class="col-sm-2 bg-primary text-white ml-2 mb-3 p-2 mt-2 text-wrap">
+                                <h3><span id="forecast-city-date0">Date: </span></h3>
+                                <div><img id="forecast-icon0" src=""></div>
+                                <p>Temperature: <span id="forecast-temp0"></span> ℉</p>
+                                <p>Humidity: <span id="forecast-humidity0"></span> %</p>
+                            </div>
+
+                            <div id="weather-dash1" class="col-sm-2 bg-primary text-white ml-2 mb-3 p-2 mt-2">
+                                <h3><span id="forecast-city-date1">Date: </span></h3>
+                                <div><img id="forecast-icon1" src=""></div>
+                                <p>Temperature: <span id="forecast-temp1"></span> ℉</p>
+                                <p>Humidity: <span id="forecast-humidity1"></span> %</p>
+                            </div>
+
+                            <div id="weather-dash2" class="col-sm-2 bg-primary text-white ml-2 mb-3 p-2 mt-2">
+                                <h3><span id="forecast-city-date2">Date: </span></h3>
+                                <div><img id="forecast-icon2" src=""></div>
+                                <p>Temperature: <span id="forecast-temp2"></span> ℉</p>
+                                <p>Humidity: <span id="forecast-humidity2"></span> %</p>
+                            </div>
+
+                            <div id="weather-dash3" class="col-sm-2 bg-primary text-white ml-2 mb-3 p-2 mt-2">
+                                <h3><span id="forecast-city-date3">Date: </span></h3>
+                                <div><img id="forecast-icon3" src=""></div>
+                                <p>Temperature: <span id="forecast-temp3"></span> ℉</p>
+                                <p>Humidity: <span id="forecast-humidity3"></span> %</p>
+                            </div>
+
+                            <div id="weather-dash4" class="col-sm-2 bg-primary text-white ml-2 mb-3 p-2 mt-2">
+                                <h3><span id="forecast-city-date4">Date: </span></h3>
+                                <div><img id="forecast-icon4" src=""></div>
+                                <p>Temperature: <span id="forecast-temp4"></span> ℉</p>
+                                <p>Humidity: <span id="forecast-humidity4"></span> %</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"
+        integrity="sha512-rmZcZsyhe0/MAjquhTgiUcb4d9knaFc7b5xAfju483gbEXTkeJRUMIPk6s3ySZMYUHEcjKbjLjyddGWMrNEvZg=="
+        crossorigin="anonymous"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
